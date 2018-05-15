@@ -30,6 +30,8 @@
 
 #include "CTDetectorConstruction.hh"
 #include "CTActionInitialization.hh"
+#include "CT_Source.hh"
+#include "CT_Distribution.hh"
 
 #ifdef G4MULTITHREADED
 #include "G4MTRunManager.hh"
@@ -46,6 +48,7 @@
 #include "Randomize.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+using namespace std;
 
 int main(int argc,char** argv)
 {
@@ -104,6 +107,12 @@ int main(int argc,char** argv)
     ui->SessionStart();
     delete ui;
   }
+
+  //Run a macro for the source being tested
+  CT_Source *src = new CT_Source();
+  CT_Distribution dis();
+  
+  
 
   // Job termination
   // Free the store: user actions, physics_list and detector_description are

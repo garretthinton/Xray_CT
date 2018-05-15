@@ -40,7 +40,7 @@ class CTActionInitialization : public G4VUserActionInitialization
   public:
 	  CTActionInitialization();
     virtual ~CTActionInitialization();
-
+	
     virtual void BuildForMaster() const;
     virtual void Build() const;
 };
